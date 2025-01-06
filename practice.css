@@ -1,0 +1,388 @@
+/* General styles */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  background-color: crimson;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 6vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  z-index: 2; /* Ensure nav stays on top of the image and text */
+  box-sizing: border-box; /* Ensure padding is considered within height */
+}
+
+.nav2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3vw;
+}
+
+.nav h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Neographik W00";
+  font-size: 1.5vw;
+  font-weight: 400;
+  color: rgb(205, 4, 0);
+}
+
+.nav2 h1 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  font-family: "anton";
+  color: rgb(205, 4, 0);
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  z-index: 1; /* Make sure image stays behind other elements */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  color: rgb(205, 4, 0);
+  text-align: center;
+  z-index: 2; /* Ensure text stays below nav */
+  font-family: "anton";
+  padding: 3vw 5vw;
+}
+
+.text-overlay h2 {
+  font-size: 3vw;
+  margin: 0;
+  color: rgb(205, 4, 0);
+}
+
+.ri-menu-line {
+  color: rgb(205, 4, 0);
+  display: none;
+  font-size: 2vw;
+}
+
+.p2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; /* Align items at the start */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.p2text {
+  width: 50%;
+  height: auto; /* Adjust height as needed */
+  position: relative;
+  top: 27%;
+  left: 20%;
+  box-sizing: border-box;
+}
+
+.p2text p {
+  font-size: 1.5vw;
+  font-family: "anton";
+}
+
+.p2info {
+  width: 50%;
+  height: auto; /* Adjust height as needed */
+  position: relative;
+  top: 25%;
+  right: 5%;
+  font-size: 1.5vw;
+  font-family: "Neographik W00";
+  box-sizing: border-box;
+}
+.specs-container {
+  position: relative; /* Ensure it's the reference for absolute positioning */
+  width: 100%;
+  height: 100%; /* Adjust height based on content */
+  margin: 0;
+  display: flex;
+  flex-direction: row; /* Stack text and specs vertically */
+  align-items: flex-start;
+  background-image: url('./spec-img.jpg'); /* Add your background image here */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the background image */
+  color: rgb(205, 4, 0); /* Adjust text color for better contrast */
+}
+.agera-text {
+  position: absolute; /* Position relative to specs-container */
+  top: 0;
+  left: 0;
+  font-size: 2.5vw;
+  color: rgb(205, 4, 0); /* Adjust color for contrast with the background */
+  font-family: "Anton";
+  padding: 3vw 3vw;
+  margin-left: 5vw;
+  z-index: 2; /* Ensure text is above the background */
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.specs-column {
+  line-height: 8vw; /* Adjust line height if needed */
+  font-size: 3vw; /* Adjust font size for better spacing */
+  margin-top: 10vw; /* Ensure enough space below the "AGERA SPECIFICATION" text */
+  margin-left: 2vw;
+  width: 50%;
+  padding: 3vw 3vw;
+  font-family: "anton";
+  color: white; /* Adjust color for contrast with the background */
+  z-index: 2; /* Ensure text is above the background */
+}
+
+.specs-column.right {
+  width: 50%;
+  margin-top: 2vw;
+}
+.smal-txt{
+  font-size: 1.5vw;
+}
+.specs-container button{
+  padding: 1vw 2vw;
+  font-family: "anton";
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  color:rgb(205, 4, 0);
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2vw;
+  cursor: pointer;
+}
+.end-page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative; /* Ensure positioning context for the copyright stamp */
+}
+
+.right-side-column {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 2.5vw;
+  font-family: "arial";
+}
+
+.column1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 7vw;
+  align-items: center;
+  font-family: "anton";
+}
+
+.column1 p1,
+.column1 p2,
+.column1 p3,
+.column1 p4 {
+  margin: 0;
+  position: relative;
+}
+
+.column1 p1 { top: 50%; left: -90%; }
+.column1 p2 { top: -1%; left: 10%; }
+.column1 p3 { top: -55%; left: -48%; }
+.column1 p4 { top: -110%; left: -45%; }
+
+.column2 {
+  font-size: 1.5vw;
+}
+
+.column3, .column4 {
+  font-size: 1vw;
+}
+a:visited {
+  color: initial;
+}
+
+
+/* Style for the copyright stamp */
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "arial";
+  font-size: 1vw;
+  color: grey;
+  text-align: center;
+}
+/* Mobile-specific styles */
+@media screen and (max-width: 600px) {
+  .nav2 {
+    display: none; /* Hide the MEGA CARS and TECHNOLOGY navigation */
+  }
+
+  .ri-menu-line {
+    display: block; /* Show the menu icon */
+    font-size: 6vw;
+    color: #FFD700;
+  }
+
+  .image-container {
+    background-image: url('./yellow.jpg'); /* Replace with your mobile background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nav h2 {
+    font-size: 6vw;
+    color: #FFD700;
+  }
+
+  .image-container img {
+    display: none; /* Hide the original image */
+  }
+
+  .text-overlay {
+    width: auto;
+    height: auto;
+    top: 25%; /* Adjust the top position as needed */
+    left: 10%; /* Adjust the left position as needed */
+    transform: none; /* Remove centering transform */
+    padding: 1vw 2vw;
+  }
+
+  .text-overlay h2 {
+    font-size: 10vw; /* Adjust font size for mobile */
+    text-align: left; /* Align text to the left */
+    color: #FFD700;
+    width: 100%; /* Ensure it doesn't overflow */
+  }
+
+  .p2 {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start;
+    padding: 5vw; /* Add some padding around the content */
+    width: 100vw; /* Ensure it doesn't overflow */ 
+    height: 100vh;
+  }
+
+  .p2text,
+  .p2info {
+    width: 100%; /* Make both sections take full width */
+    text-align: left; /* Align text to the left */
+  }
+
+  .p2text {
+    top: 0; /* Reset positioning */
+    left: 0;
+    height: auto; /* Adjust height as needed */
+    margin-top: 100px;
+  }
+
+  .p2text p {
+    font-size: 5vw; /* Adjust font size for mobile */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+
+  .p2info {
+    top: 0; /* Reset positioning */
+    right: 0;
+    padding: 2vw 1vw;
+    height: auto; /* Adjust height as needed */
+    margin-top: 100px;
+  }
+
+  .p2info p {
+    font-size: 4vw; /* Adjust font size for mobile */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  .specs-container {
+    background-image: url('./spec-mobile-img.jpg'); /* Replace with your mobile background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    padding: 5vw; /* Add padding around the content */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the content */
+    margin: 0;
+    height: 102%;
+  }
+  .agera-text {
+    font-size: 10vw;
+    margin: 0;
+    padding: 2vw;
+    color: #FFD700;
+  }
+  .specs-column {
+    width: 100%; /* Make columns take full width */
+    margin-top: 50vw; /* Adjust margin between items */
+    font-size: 10vw; /* Increase font size */
+    line-height: 10vw; /* Adjust line height for better spacing */
+    color: #FFD700;
+  }
+  .specs-column.right{
+    width: 100%; /* Make columns take full width */
+    margin: 0;
+  }
+  .smal-txt{
+    font-size: 5vw;
+  }
+  .specs-container button {
+    position: relative; /* Reset positioning */
+    top: 10%; /* Reset top positioning */
+    left: auto; /* Reset left positioning */
+    margin-top: 4vw; /* Add margin to separate from specs */
+    width: 80%; /* Make button wider on mobile */
+    font-size: 4vw; /* Adjust font size for mobile */
+    padding: 2vw 4vw; /* Adjust padding for mobile */
+    color: #FFD700;
+    background-color: black;
+  }
+  .copyright {
+    font-size: 4vw; /* Adjust font size for mobile */
+}
+}
